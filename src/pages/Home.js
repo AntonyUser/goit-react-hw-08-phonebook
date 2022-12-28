@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>
-        Cotacts saver welcome page{' '}
+        Contacts saver welcome page{' '}
         <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span>
