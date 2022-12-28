@@ -1,13 +1,20 @@
 import React from 'react';
 import { Formik, Field } from 'formik';
 import PropTypes from 'prop-types';
-import { Form, Button, ErrorMessage, Label, Input } from './ContactForm.styled';
+import {
+  Form,
+  ErrorMessage,
+  Label,
+  Input,
+  DivButton,
+} from './ContactForm.styled';
 import * as yup from 'yup';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
+import SendIcon from '@mui/icons-material/Send';
 
 yup.addMethod(yup.string, 'validation', function () {
   return this.matches(
@@ -101,10 +108,14 @@ export const ContactForm = () => {
             />
             <ErrorMessage name="number" component="div" />
           </Field>
-
-          <Button type="submit" disabled={!name || !number}>
+          <DivButton
+            variant="contained"
+            endIcon={<SendIcon />}
+            type="submit"
+            disabled={!name || !number}
+          >
             Add contact
-          </Button>
+          </DivButton>
         </Form>
       </Formik>
     </>

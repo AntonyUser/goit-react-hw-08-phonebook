@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Form as FormikForm, ErrorMessage as Error } from 'formik';
+import Button from '@mui/material/Button';
 
 export const Form = styled(FormikForm)`
   border: 1px solid black;
@@ -11,9 +12,9 @@ export const ErrorMessage = styled(Error)`
   color: red;
   font-size: 13px;
 `;
-export const Button = styled.button`
-  width: 150px;
-  font-size: 18px;
+export const DivButton = styled(Button)`
+  width: 200px;
+  font-size: 12px;
   margin-left: 10px;
 `;
 export const Input = styled.input`

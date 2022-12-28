@@ -12,3 +12,6 @@ export const Label = styled.label`
   border-radius: 4px;
   font-size: 22px;
 `;
+export const Div = styled.div`
+  padding: 12px 12px 12px 0px;
+`;
